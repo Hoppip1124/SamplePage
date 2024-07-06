@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>私について</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/destyle.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- 固定ヘッダー -->
+    <nav>
+        <div class="logo">
+            <a href="./index.html"><h4>Sample</h4></a>
+        </div>
+        <ul class="nav_links">
+            <li><a href="./index.html">ホーム</a></li>
+            <li><a href="./about_page.html">本サイトについて</a></li>
+            <li><a href="./about_me.html">私について</a></li>
+            <li><a href="./contact.php">お問い合わせ</a></li>
+        </ul>
+
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- コンテンツ -->
+    <section>
+        <div class="container d-flex justify-content-center my-5">
+            <h1 class="page-title fs-1">私について</h1>
+        </div>
+    </section>
+
+    <section>
+        <table class="container table table-borderd border-dark table-responsive">
+            <tr>
+                <th>名前</th>
+                <td>Yuki Aoki</td>
+            </tr>
+            <tr>
+                <th>ポートフォリオサイト</th>
+                <td>http://localhost/sample_site/index.html</td>
+            </tr>
+            <tr>
+                <th>設立年月日</th>
+                <td>令和6年5月1日</td>
+            </tr>
+            <tr>
+                <th>本社所在地</th>
+                <td>大阪</td>
+            </tr>
+            <tr>
+                <th>代表電話番号</th>
+                <td>XXX-XXXX-XXXX</td>
+            </tr>
+            <tr>
+                <th>代表者</th>
+                <td>Yuki Aoki</td>
+            </tr>
+            <tr>
+                <th>資本金</th>
+                <td>XXXX万円</td>
+            </tr>
+            <tr>
+                <th>従業員数</th>
+                <td>XXXX人</td>
+            </tr>
+            <tr>
+                <th>事業内容</th>
+                <td>コーディング</td>
+            </tr>
+        </table>
+    </section>
+
+    <script src="./js/script.js"></script>
+
+    <script>
+        // sectionにnavの高さ分のパディングを設定
+        var navHeight = document.querySelector('nav').offsetHeight;
+
+        document.querySelector('section').style.paddingTop = navHeight + 'px';
+    </script>
+</body>
+</html>

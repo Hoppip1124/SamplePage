@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 
+                 'Lucida Sans Regular', 
+                 'Lucida Grande', 
+                 'Lucida Sans Unicode', 
+                 Geneva, 
+                 Verdana, 
+                 sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: black;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.nav_links {
+    display: flex;
+    justify-content: space-around;
+    width: 38%;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav_links a {
+    text-decoration: none;
+    color: white;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav_active {
+    transform: translateX(0%) !important;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav_links {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav_links {
+        position: absolute;
+        right: 0;
+        height: 92vh;
+        top: 8vh;
+        background-color: black;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        z-index: 100;
+    }
+
+    .nav_links li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    /* index.html */
+    .hero {
+        width: 100vw; /* ブラウザ幅に合わせる */
+        height: 100vh; /* ブラウザ高さに合わせる */
+    }
+
+    .hero div {
+        width: 100%; /* ブラウザ幅に合わせる */
+        height: 100%; /* ブラウザ高さに合わせる */
+    }
+
+    .hero img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* 画像を表示領域に合わせて拡大縮小 */
+    }
+
+    /* about_me.html */
+    table {
+        display: block;
+        width: 100%;
+        border: solid 1px;
+    }
+    table tr {
+        display: block;
+        width: 100%;
+    }
+
+    table th {
+        display: block;
+        width: 100%;
+    }
+}
+
+@keyframes navLinksFade {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* index.html */
+.hero {
+    /*position: absolute;*/
+    top: 0;
+    width: 100vw; /* ブラウザ幅に合わせる */
+    height: 100vh; /* ブラウザ高さに合わせる */
+    overflow: hidden; /* スクロールを禁止する */
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 画像を表示領域に合わせて拡大縮小 */
+}
+
+/* about_page.html */
+/* javascript処理完了後に表示するために初期状態はnoneにする */
+.contents {
+    display: none;
+}
+
+h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
